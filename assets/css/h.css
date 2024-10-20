@@ -1,0 +1,20 @@
+h2 {
+    width: 100%;
+    background-color: #B9CFD0;
+    color: #6F7E86;
+    border-bottom: 1px solid #6F7E86;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    width:100%;
+    background-color: #6f7e861e;
+    color: #6F7E86;
+    border-bottom: 1px solid #6F7E86;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}

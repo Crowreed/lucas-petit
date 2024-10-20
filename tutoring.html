@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours particuliers - Lucas Petit</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/h.css">
+    <link rel="stylesheet" href="assets/css/p.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link rel="stylesheet" href="assets/css/tag.css">
+    <link rel="stylesheet" href="assets/css/link.css">
+
+    <style>
+        .courses-section {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-section {
+            width: 100%;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        .pdf-grid {
+            width: 100%;
+        
+       
+            display: flex;
+
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .pdf-item {
+            background-color: #b9cfd044;
+            
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        /* Surbrillance lors du survol du PDF */
+        .pdf-item:hover {
+            box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5); /* Effet de surbrillance */
+            transform: scale(1.05); /* Agrandir légèrement */
+            transition: all 0.2s ease; /* Animation douce */
+        }
+
+        .title {
+            margin-bottom: 5px;
+            font-size: smaller;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+    <div id="header-container"></div>
+
+    <div class="content">
+        <div class="inner-content">
+            <p>Retrouvez ici tous les documents relatifs aux cours particuliers que je propose, avec des supports, exercices et corrigés pour chaque niveau.</p>
+
+            <section class="courses-section">
+                <h2>Mathématiques</h2>
+
+                
+                <div class="pdf-grid">
+                    <div class="pdf-item" >
+                        <p class = "title">Calcul mental - 6 ème</p>
+                        <div id="pdf-container1"> </div>
+                    </div>
+
+                    <div class="pdf-item" >
+                        <p class = "title">Calcul astucieux - 6 ème</p>
+                        <div id="pdf-container2"> </div>
+                    </div>
+
+                    <div class="pdf-item" >
+                        <p class = "title">Calcul mental 2 - 6 ème</p>
+                        <div id="pdf-container3"> </div>
+                    </div>
+
+                </div>
+
+
+ 
+            </section>
+
+            <section class="contact-section">
+                <h3>Me contacter</h3>
+                <p>Si vous avez des questions sur un cours ou si vous avez besoin de documents supplémentaires, n'hésitez pas à me contacter par email.</p>
+            </section>
+        </div>
+    </div>
+
+    
+
+    <div id="footer-container"></div>
+    
+    
+    <script>
+       function displayPDF(url, containerId) {
+    var container = document.getElementById(containerId);
+    container.innerHTML = '';
+
+    var loadingTask = pdfjsLib.getDocument(url);
+    loadingTask.promise.then(function(pdf) {
+        console.log('PDF chargé');
+        
+        // Afficher la première page du PDF
+        pdf.getPage(1).then(function(page) {
+            console.log('Page chargée');
+
+            // Ajuste la valeur de l'échelle pour réduire la taille du PDF
+            var scale = 0.35; // PDF réduit à 75% de sa taille originale
+            var viewport = page.getViewport({ scale: scale });
+
+            // Créer un canevas pour afficher le PDF
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            container.appendChild(canvas);
+
+            // Rendre la page dans le canevas
+            var renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            page.render(renderContext).promise.then(function () {
+                console.log('Page rendue');
+            });
+
+            // Rendre le PDF cliquable
+            canvas.addEventListener('click', function() {
+                        window.open(url, '_blank'); // Ouvrir le PDF dans un nouvel onglet
+                    });
+        });
+    });
+}
+
+        window.onload = function() {
+            displayPDF('assets/pdf/tutoring/Exercices.pdf', 'pdf-container1');
+            displayPDF('assets/pdf/tutoring/Exercices_2.pdf', 'pdf-container2');
+            displayPDF('assets/pdf/tutoring/Exercices_3.pdf', 'pdf-container3');
+        };
+    </script>
+    
+    <script src="assets/js/loadHeaderFooter.js"></script>
+    
+</body>
+
+</html>

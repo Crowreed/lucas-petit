@@ -1,0 +1,15 @@
+.link {
+    display: inline-block; /* Pour transformer le lien en bloc comme un bouton */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold; /* Texte en gras */
+    background-color: #B9CFD0;
+    color: #EDEDED;
+    border-radius: 15px; /* Coins arrondis pour un effet de bouton */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: #6F7E86;
+}

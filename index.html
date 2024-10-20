@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>À propos de moi - Lucas Petit</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/h.css">
+    <link rel="stylesheet" href="assets/css/p.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link rel="stylesheet" href="assets/css/tag.css">
+    <link rel="stylesheet" href="assets/css/link.css">
+
+    <style>
+        .about-section {
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-photo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-photo img {
+            
+            border-radius: 50%;
+            overflow: hidden;    
+            width: 150px;
+            height: auto;
+        }
+
+        .divider {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pictures {
+            padding: 15px;
+            display: flex;
+            
+            align-items: center;
+        }
+
+        .picture {
+            width: 200px;
+            height: 200px;            
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    
+    <div class="content">
+        <div class="inner-content">
+            <section class="about-section">
+                <div class="about-photo"><img src="assets/images/me.jpg" alt="Photo de Lucas Petit"></div>
+                
+                <p>Lucas Petit - Étudiant en informatique et mathématiques</p>
+                
+                <p> Je m'appelle Lucas et je suis actuellement étudiant en dernière année de master en informatique. Passionné par l'informatique et les mathématiques abstraites, j'aime résoudre des problèmes complexes et explorer de nouvelles solutions techniques. Mon parcours m'a permis d'acquérir des compétences solides en mathématique, en programmation et en développement d'algorithmes. </p>
+                
+                <div class="divider"></div>
+                
+                <p> Au cours de mes études, j'ai eu l'occasion de travailler sur plusieurs projets académiques et personnels. Cela inclut le développement de sites web, de jeux vidéos ou d'algorithmes sur mesure. Parallèlement, j'ai également donné des cours particuliers de mathématiques, une expérience enrichissante qui m'a permis de renforcer mes capacités pédagogiques et ma gestion de projet. </p>
+                
+                <div class="divider"></div>
+                
+                <p>En dehors de mes études, je suis passionné par la randonnée, l'astronomie et l'origami. Voici quelques photos que j'ai prises de ce que je fais !</p>
+
+                <div class="pictures">
+                    <div>
+                        <p>Jupiter</p>
+                        <img class="picture" src="assets/images/IMG_9110.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>La Lune</p>
+                        <img class="picture" src="assets/images/IMG_9111.jpg" alt="">
+                    </div>
+                    <div>
+                        <p>Un Kusudama</p>
+                        <img class="picture" src="assets/images/IMG_9112.jpg" alt="">
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <p>Je suis le créateur d'un site web éducatif, principalement sur le sujet des mathématiques et de l'informatique. Il y est regroupé un forum de discussion et d'entraide et des cours à suivre.</p>
+            </section>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    
+    <script src="assets/js/loadHeaderFooter.js"></script>
+</body>
+
+</html>

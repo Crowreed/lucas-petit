@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lucas Petit</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/h.css">
+    <link rel="stylesheet" href="assets/css/p.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link rel="stylesheet" href="assets/css/tag.css">
+    <link rel="stylesheet" href="assets/css/link.css">
+
+    <style>
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(1000    px, 1fr));
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .portfolio-item {
+            border: 2px solid #ccc;
+            background-color: #b9cfd044;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            width: 150px;
+            height: 150px;
+
+            margin: 10px;
+        }
+
+        a {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-container"></div>
+
+    <div class="content">
+        <div class="inner-content">
+
+            <p>Voici une sélection de mes réalisations, incluant des travaux académiques et personnels. Il sera complété au fur et à mesure</p>
+            
+
+            <section class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h2>Conception et implémentation d'algorithmes de ray tracing en Python</h2>
+
+                    <div>
+                        <img src="assets/images/portfolio/raytracing/0.gif" alt="">
+                        <img src="assets/images/portfolio/raytracing/1.gif" alt="">
+                        <img src="assets/images/portfolio/raytracing/2.png" alt="">
+                        <img src="assets/images/portfolio/raytracing/3.png" alt="">    
+                    </div>
+                
+                    <p>Le ray tracing est une technique de rendu utilisée pour générer des images réalistes en simulant le comportement des rayons de lumière dans une scène 3D. L'algorithme suit le parcours de chaque rayon depuis la caméra à travers une image virtuelle, et calcule ses interactions avec les objets dans la scène, comme les réflexions, la réfraction et l'ombrage. Il est possible de calculer les opérations mathématiques de bases tel que les union, les intersections et les complémentaires.</p>
+                    
+                    <h3>Algorithme de base</h3>
+
+                    <p>L'algorithme de base envoie un rayon depuis la caméra pour chaque pixel de l'image. Lorsque ce rayon intersecte un objet, la couleur du pixel est déterminée en fonction des propriétés de l'objet et des interactions lumineuses (ombrages, éclairages directs, etc.).</p>
+            
+                    <h3>Ray tracing distribué</h3>
+
+                    <p>Simule les effets de lumière plus complexes comme la profondeur de champ, les ombrages flous et les réflexions douces, en traçant plusieurs rayons pour chaque pixel.</p>
+            
+                    <h3>Polynômes de Bernstein et Algorithme de Casteljau</h3>
+
+                    <p>Utilisés pour tracer des courbes et des surfaces lisses, souvent pour modéliser des formes organiques. Ils permettent de subdiviser et d'approximer ces courbes pour rendre plus efficacement. Grâce à ces algorithmes, il est possible de générer des images photoréalistes, en prenant en compte des effets tels que les réflexions, la réfraction, et les jeux d'ombres complexes.</p>
+
+                    <p>Compétences développées :</p>
+                    <span class="tags">
+                        <span class="tag">
+                            Python
+                        </span>
+                        
+                        <span class="tag">
+                            Algèbre
+                        </span>
+                        
+                        </span>
+                    <a href="" class="link">GitHub</a>
+                </div>
+
+                <div class="portfolio-item">
+                    Aucunes images pour le moment.
+
+                    <h2>Projet de jeu vidéo 2D avec tile mapping et optimisation (C++ & SFML)</h2>
+
+                    <h3>Description générale</h3>
+
+
+                    <p>Ce projet est un jeu vidéo 2D développé en C++ à l'aide de la bibliothèque SFML. L'une des principales caractéristiques du projet était l'utilisation du tile mapping, une technique qui permet de diviser le monde du jeu en tuiles individuelles, facilitant ainsi la création de niveaux vastes tout en optimisant les performances.</p>
+                    
+                    <h3>Éditeur de niveaux</h3>
+                    <p>J'ai également développé un éditeur de niveaux personnalisé, qui permettait de créer des cartes en plaçant manuellement les tuiles sur une grille. Cet outil permettait de modifier facilement les environnements du jeu sans nécessiter de modifications directes du code source.</p>
+                    
+                    <h3>Optimisation du rendu</h3>
+                    <p>Un aspect clé de ce projet a été l'optimisation du rendu graphique. Pour améliorer les performances, j'ai implémenté un algorithme qui détectait les tuiles situées en dehors du champ de vision de la caméra, de sorte qu'elles ne soient pas rendues. Cette approche a permis d'éviter de dessiner inutilement des parties invisibles de la carte, ce qui a grandement amélioré l'efficacité du moteur de jeu.</p>
+                    
+                    <p>Compétences développées</p>
+                    <span class="tags">
+                        <span class="tag">
+                            Java
+                        </span>
+                            
+                        <span class="tag">
+                            Optimisation
+                        </span>
+                    </span>
+                    <a href="" class="link">GitHub</a>
+                </div>     
+            </section>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="assets/js/loadHeaderFooter.js"></script>
+
+</body>
+
+</html>

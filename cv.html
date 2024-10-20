@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV - Lucas Petit</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/h.css">
+    <link rel="stylesheet" href="assets/css/p.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link rel="stylesheet" href="assets/css/tag.css">
+    <link rel="stylesheet" href="assets/css/link.css">
+
+    <style>
+       
+        .section {
+            width: 100%;
+            margin-bottom: 50px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .divider {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+        
+        .section ul li {
+            margin-bottom: 5px;
+        }
+
+       
+    
+    .text-box {
+        position: absolute; /* Positionne la boîte */
+        background-color: white;
+        border: 2px solid #ccc;
+        padding: 5px; /* Réduit le padding pour diminuer la taille */
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 5px;
+        width: 250px;
+        overflow: hidden; /* Cache le débordement du texte si trop long */    
+        text-overflow: ellipsis; /* Ajoute des points de suspension si le texte est trop long */
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <div class="content">
+        <div class="inner-content">
+            <div class="section">
+                <h2>À propos de moi</h2>
+                <p>Passionné par les mathématiques et l'informatique, je trouve mon équilibre dans l'abstraction, où les idées prennent forme et deviennent solutions concrètes. J’aime transformer la complexité théorique en applications tangibles.</p>
+            </div>
+
+            <div class="section">
+                <h2>Expérience</h2>
+                <h3>Professeur particulier - mathématiques (Freelance) - Dijon</h3>
+                
+                <p>Élaboré des plans de cours adaptés aux besoins individuels. Simplifié des concepts complexes pour aider les élèves à mieux comprendre des sujets abstraits et techniques.</p>
+
+                <div class="divider"></div>
+                
+                <h3>Opérateur de production - Freudenberg - Langres</h3>
+                
+                Collaboré avec une équipe pour atteindre les objectifs de production quotidiens dans des délais serrés.
+                
+            </div>
+
+            <div class="section">
+                <h2>Projets</h2>
+                
+                <p>Vous pouvez retrouver tous mes projets dans la section <a href="projects.html" class="link">Mes projets</a> et <a href="portfolio.html" class="link" href="">Portfolio</a></p>
+            </div>
+
+    <div class="section">
+
+        <h2>Compétences</h2>
+        <p>Vous pouvez cliquer sur les <span class="tag" data-text="Ceci est un tag." onclick="toggleText(this)">tag</span> afin de voir plus de détail sur la compétence.</p>
+        
+        
+        <div class="tags">
+            <span class="tag" data-text="" onclick="toggleText(this)">Pro-actif</span>
+            <span class="tag" data-text="J'ai commencé par apprendre la programmation sur Open Classrooms au collège, j'aime apprendre de nouveaux concepts par mon propre chemin." onclick="toggleText(this)">Autodidacte</span>
+            <span class="tag" data-text="Ayant fait un master en mathématique, j'ai un gout accentué de l'abstraction." onclick="toggleText(this)">Capacité d'abstraction</span>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="tags">
+            <span class="tag" data-text="Voir mes projets." onclick="toggleText(this)">C, C++</span>
+            <span class="tag" data-text="Ce site web utilise les langages de balisages HTML5, CSS3 et JavaScript." onclick="toggleText(this)">HTML5, CSS3, JavaScript</span>
+            <span class="tag">SQL, MySQL</span>
+            <span class="tag">PHP</span>
+            <span class="tag" data-text="Voir mes projets." onclick="toggleText(this)">Java</span>
+            <span class="tag" data-text="Voir mes projets." onclick="toggleText(this)">Python</span>
+        </div>
+
+        <div class="divider"></div>
+        
+        <div class="tags">
+            <span class="tag" data-text="Je rédige les articles de mon site web éducatif en MarkDown." onclick="toggleText(this)">Rédaction : LaTeX, Markdown</span>
+            <span class="tag" data-text="" onclick="toggleText(this)">Pack Office</span>
+            <span class="tag" data-text="Je suis à l'aise avec les deux systèmes d'exploitations, je possède notament un ordinateur portable sous Ubuntu." onclick="toggleText(this)">Linux, Windows</span>
+            <span class="tag" data-text="" onclick="toggleText(this)">GitHub, GitLab</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="tags">
+            <span class="tag" data-text="" onclick="toggleText(this)">Recherche Opérationnelle, MILP</span>
+            <span class="tag" data-text="Notamment les codes correcteurs d'erreurs." onclick="toggleText(this)">Calcul Formel</span>
+            <span class="tag" data-text="" onclick="toggleText(this)">Sécurité Logicielle</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="tags">
+            <div class="tag" data-text="" onclick="toggleText(this)">Mathématiques appliqués</div>
+            <div class="tag" data-text="" onclick="toggleText(this)">Statistiques et Probabilités</div>
+            <div class="tag" data-text="" onclick="toggleText(this)">Analyse Numérique</div>
+        </div>
+    </div>
+
+    <div class="text-box" style="display: none;"></div> <!-- La boîte de texte -->
+
+    <div class="section">
+        <h2>Langues</h2>
+        <p>Français : natif</p>
+
+        <div class="divider"></div>
+        
+        <p>Anglais : C1 </p>
+    </div>
+
+    <div class="section">
+        <h2>Formation</h2>
+        <h3>Master en Informatique - spécialisation : Algorithmie - Université de Montpellier (Septembre 2023 - En cours)</h3>
+        <ul>
+            <li><a href="https://formations.umontpellier.fr/fr/formations/master-XB/master-informatique-ME154/algorithmique-PR479/m1-algorithmique-KMAGYMYT.html">Master 1</a> - Université de Montpellier</li>
+            <li><a href="https://formations.umontpellier.fr/fr/formations/master-XB/master-informatique-ME154/algorithmique-PR479/m2-algorithmique-KMAGYWY2.html">Master 2</a> - Université de Montpellier (en cours)</li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Master en Mathématiques - Université de Bourgogne - Université de Montpellier (2021 - 2023) </h3>
+        <ul>
+            <li><a href="https://blog.u-bourgogne.fr/master-pmg/2023/09/20/cours-en-m1/">Master 1</a> - Université de Bourgogne</li>
+            <li><a href="https://formations.umontpellier.fr/fr/formations/master-XB/master-mathematiques-ME157/preparation-a-l-agregation-externe-de-mathematiques-prepa-agreg-PR500/m2-preparation-a-l-agregation-externe-de-mathematiques-prepa-agreg-KKIDFN1E.html">Master 2</a> - Université de Montpellier (S1 validé)</li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Licence en Mathématiques - Université de Bourgogne (2018 - 2021)</h3>
+        <ul>
+            <li><a href="https://sciences-techniques.u-bourgogne.fr/wp-content/uploads/2024/09/ProgrammeL3.pdf">Licence 3</a> - Université de Bourgogne</li>
+        </ul>
+
+        <div class="divider"></div>
+        <h3>Baccalauréat scientifique - Sciences de l'ingénieur - Lycée Denis Diderot (2015 - 2018) - Langres</h3>
+        <p>Mention Très Bien, avec mention section européenne</p>
+    </div> 
+
+    <section>        
+        <p><a class="link" href="assets/pdf/CV-PETIT-LUCAS.pdf" download>Télécharger mon CV en PDF</a></p>
+    </section>
+    </div>
+</div>
+
+    <div id="footer-container"></div>
+    <script src="assets/js/loadHeaderFooter.js"></script>
+    <script>
+        function toggleText(tag) {
+            const textBox = document.querySelector('.text-box');
+            const text = tag.getAttribute('data-text'); // Récupère le texte depuis l'attribut data-text
+
+            // Vérifie si la boîte de texte est actuellement affichée
+            if (textBox.style.display === "none") {
+                textBox.style.display = "block"; // Affiche la boîte de texte
+                textBox.textContent = text; // Utilise le texte récupéré pour la boîte
+                // Positionne la boîte de texte au-dessus du tag
+                const tagRect = tag.getBoundingClientRect();
+
+                textBox.style.top = `${tagRect.top + window.scrollY - textBox.offsetHeight - 25}px`;
+                textBox.style.left = `${tagRect.left}px`;
+
+                
+            } else {
+                textBox.style.display = "none"; // Cache la boîte de texte
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets - Lucas Petit</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/h.css">
+    <link rel="stylesheet" href="assets/css/p.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link rel="stylesheet" href="assets/css/tag.css">
+    <link rel="stylesheet" href="assets/css/link.css">
+
+
+    <style>
+     
+        section ul li {
+            margin-bottom: 7px;
+        }
+
+        section {
+            width: 100%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
+        }
+       
+        .divider {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        ul {
+            padding-left: 20px;
+            list-style: none; /* Supprimer les puces */
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <div class="content">
+        <div class="inner-content">
+            <p>Voici une sélection de projets que j'ai réalisés, incluant des travaux personnels et académiques en informatique et mathématiques.</p>
+            <p>Vous pouvez cliquer sur les <span class="tag" data-text="Ceci est un tag." onclick="toggleText(this)">tag</span> afin de voir plus de détail sur la compétence.</p>
+
+        <section> 
+            <h2>Développement collaboratif d'une heuristique pour le problème WSRP en Java</h2>
+            <p> Ce projet consistait à développer une heuristique pour résoudre le problème du WSRP (Workforce Scheduling and Routing Problem), un problème NP-difficile en recherche opérationnelle.</p> 
+            
+            <p> Le développement a été réalisé de manière collaborative sur GitLab sous la direction de Chloé Desdouits de DecisionBrain. Une attention particulière a été portée aux tests unitaires et aux bonnes pratiques de codage, garantissant ainsi la robustesse et la fiabilité du code.
+            </p>
+
+            <p>Compétences développées</p>
+
+            <span class="tags">
+                <span class="tag">Programmation objet</span>
+                <span class="tag">Test unitaire</span>
+                <span class="tag">intérgration continue</span>
+                <span class="tag">GitLab</span>
+                <span class="tag">Java</span>
+            </span>
+
+            <a href="" class="link">GitLab</a>
+        </section>
+
+    <section>
+        <h2>Développement d'un site web personnel</h2>
+        <p>Un projet de création d'un site web vitrine en HTML/CSS pour présenter mes compétences et projets.</p>
+        <ul>
+            <li><strong>Résumé :</strong> Conception d'un site responsive avec sections CV, Portfolio, et Blog.</li>
+        </ul>
+
+        <p>Compétences développées</p>
+
+        <span class="tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">GitHub</span>
+        </span>
+        <a href="" class="link">GitHub</a>
+    </section>
+    
+    <section>
+        <h2>Exploration des Codes de Gray et de Beckett-Gray - 2024</h2>
+
+        <p>Collaborateurs : <a class="link" href="https://gitlab.com/JMMat">Mattéo Mennesson</a></p>
+
+        <p>Nous avons effectué une exploration approfondie des codes de Gray et codes de Beckett-Gray, avec une analyse poussée de la litterature scientifique sur le sujet, incluant des implémentations, des heuristiques et des analyses.</p>
+
+        <p>Ce projet explore les codes de Gray et les codes de Beckett-Gray, deux types de codage utilisés pour minimiser les transitions binaires dans les circuits logiques. Nous avons implémenté des algorithmes de génération et proposé des heuristiques pour optimiser leur performance,. Les résultats incluent des analyses statistiques et des optimisations qui permettent une génération plus rapide de ces codes pour des longueurs élevées de mots.</p>
+
+        <p>Compétences développées</p>
+
+        <span class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">LaTex</span>
+            <span class="tag">GitHub</span>
+        </span></p>
+
+        
+
+        <ul>
+            <li>Objectif du projet : Comprendre et optimiser la génération des codes de Gray et de Beckett-Gray.</li>
+            <li>Méthodologie : Implémentation d'algorithmes de génération (Python/C++), développement d'heuristiques pour accélérer la génération, analyse statistique des propriétés des codes.</li>
+            <li>Résultats : Accélération significative des temps de calcul grâce aux heuristiques, notamment pour des codes Beckett-Gray sur des mots de 6 bits.</li>
+            
+        </ul>
+
+        <a href="" class="link">GitHub</a>
+        
+    </section>
+
+
+</div></div>
+    <div id="footer-container"></div>
+
+    <script src="assets/js/loadHeaderFooter.js"></script>
+
+    
+</body>
+</html>
